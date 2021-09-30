@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Álvaro Basílio de Araújo
+- Matrícula: 19.1.8019
+- Curso: Sistemas de informação
+- Semestre/Ano correntes: 21.1
+- Link para o seu GitHub: https://github.com/alvarobasia
 
 ## [Projeto final:](./Projeto/README.md) 
 
