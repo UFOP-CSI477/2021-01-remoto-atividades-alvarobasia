@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos - Atividade 1</title>
+    <title>Perfil - Atividade 1</title>
+    <link rel="stylesheet" href="./styles/global.css" />
   </head>
   <body>
     <header class="navbar-home">
@@ -21,7 +22,7 @@
         <li>
           <a href="estados.html">Estados</a>
         </li>
-        <li>
+        <li class="current">
           <a href="perfil.html">Perfil</a>
         </li>
         <li>
@@ -37,8 +38,7 @@
     </header>
 
     <img
-      height="300px"
-      width="auto"
+      class="image-car"
       src="https://images.unsplash.com/photo-1632993950427-44e4c8f90023?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1964&q=80"
       alt="imagem de um carro"
     />
@@ -59,5 +59,19 @@
         </li>
       </ul>
     </main>
+    <div class="info-table">
+      <table>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Data de nascimento</th>
+        </tr>
+        <tr>
+          <td>João Marcelo</td>
+          <td>joao.mar@gmail.com</td>
+          <td>01/10/00</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
