@@ -54,3 +54,19 @@ li:hover {
 .current {
   background-color: green;
 }
+
+.menu-actions-main ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-between;
+}
+.menu-actions-main ul li {
+  width: 150px;
+  height: 80px;
+}
+.menu-actions-main ul li button {
+  width: 100%;
+  height: 100%;
+}
