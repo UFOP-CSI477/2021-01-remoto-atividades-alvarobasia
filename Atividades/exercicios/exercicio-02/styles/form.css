@@ -1,0 +1,29 @@
+form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  padding: 10px;
+  border: 1px solid blue;
+  margin: 10px 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+}
+input[type="text"] {
+  width: 80%;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+div.radio {
+  display: flex;
+  align-items: center;
+}

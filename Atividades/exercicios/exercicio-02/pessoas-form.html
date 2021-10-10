@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./styles/global.css" />
+      <link rel="stylesheet" href="./styles/form.css" />
+    </head>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form action="./validar.html" method="GET">
+      <div>
+        <label for="name">Nome</label>
+        <input
+          placeholder="Digite aqui seu nome"
+          id="name"
+          type="text"
+          name="name"
+        />
+      </div>
+      <div>
+        <label for="age">Idade</label>
+        <input
+          placeholder="Digite aqui sua idade"
+          id="age"
+          type="number"
+          name="age"
+        />
+      </div>
+      <div>
+        <label for="gender">Gênero</label>
+        <div class="radio">
+          <input type="radio" name="gender" value="masc" />
+          <p>Homem</p>
+        </div>
+        <div class="radio">
+          <input type="radio" name="gender" value="fem" />
+          <p>Mulher</p>
+        </div>
+        <div class="radio">
+          <input type="radio" name="gender" value="outher" />
+          <p>Outro</p>
+        </div>
+        <div class="radio">
+          <input type="radio" name="gender" value="not" />
+          <p>Nenhum</p>
+        </div>
+        <input type="submit" value="Cadastrar" />
+      </div>
+    </form>
+  </body>
+</html>
