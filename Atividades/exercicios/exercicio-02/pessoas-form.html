@@ -31,25 +31,43 @@
         />
       </div>
       <div>
-        <label for="gender">Gênero</label>
+        <label>Gênero</label>
         <div class="radio">
-          <input type="radio" name="gender" value="masc" />
-          <p>Homem</p>
+          <input type="radio" id="masc" name="gender" value="masc" />
+          <label for="masc">Homem</label>
         </div>
         <div class="radio">
-          <input type="radio" name="gender" value="fem" />
-          <p>Mulher</p>
+          <input type="radio" id="fem" name="gender" value="fem" />
+          <label for="fem">Mulher</label>
         </div>
         <div class="radio">
-          <input type="radio" name="gender" value="outher" />
-          <p>Outro</p>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Outro</label>
         </div>
         <div class="radio">
-          <input type="radio" name="gender" value="not" />
-          <p>Nenhum</p>
+          <input type="radio" id="not" name="gender" value="not" />
+          <label for="not">Outro</label>
         </div>
-        <input type="submit" value="Cadastrar" />
       </div>
+      <div>
+        <label for="">Áreas de interesse:</label>
+        <div>
+          <input type="checkbox" id="web" name="area[0]" /><label for="web"
+            >Web</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="redes" name="area[1]" /><label for="redes"
+            >Redes</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="Banco" name="area[2]" /><label for="Banco"
+            >Banco</label
+          >
+        </div>
+      </div>
+      <input type="submit" value="Cadastrar" />
     </form>
   </body>
 </html>
