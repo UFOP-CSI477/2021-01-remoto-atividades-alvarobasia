@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <p class="exp"></p>
+        <p class="current"></p>
+      </div>
+      <div class="operators">
+        <button class="operator" data-value="+">+</button>
+        <button class="operator" data-value="-">-</button>
+        <button class="operator" data-value="*">x</button>
+        <button class="operator" data-value="/">/</button>
+      </div>
+      <div class="interface">
+        <div class="numbers">
+          <button class="number" data-value="7">7</button>
+          <button class="number" data-value="8">8</button>
+          <button class="number" data-value="9">9</button>
+          <button class="number" data-value="4">4</button>
+          <button class="number" data-value="5">5</button>
+          <button class="number" data-value="6">6</button>
+          <button class="number" data-value="1">1</button>
+          <button class="number" data-value="2">2</button>
+          <button class="number" data-value="3">3</button>
+          <button class="number zero" data-value="0">0</button>
+          <button class="number" data-value=".">.</button>
+        </div>
+        <div class="commands">
+          <button data-value="C" class="clear">C</button>
+          <button data-value="D" class="equals">D</button>
+          <button data-value="=" class="equals">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
