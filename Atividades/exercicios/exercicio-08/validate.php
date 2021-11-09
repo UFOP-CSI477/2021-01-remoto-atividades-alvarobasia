@@ -8,8 +8,7 @@ $un = $_POST['un'];
 
 
 if (empty($name) || empty($un)) {
-    header('Location: index.php?error=empty');
-    exit();
+    die("Campos em branco");
 }
 
 try {
@@ -29,6 +28,5 @@ try {
     exit();
 } catch (Exception $e) {
     $connection->rollBack();
-    header('Location: index.php?error=dberror');
-    exit();
+    die("Erro no banco de dados");
 }
