@@ -15,25 +15,31 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Models\Produto;
+use App\Http\Controllers\ProdutoController;
+
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('principal');
 });
 
 
-Route::get('/produtos', function () {
-    $produtos = Produto::all();
-    return view('lista', ['produtos' => $produtos]);
-});
+Route::resource('/produtos', ProdutoController::class);
 
 
-Route::get('/produtos/{id}', function ($id) {
-    $produto =  Produto::findOrFail($id);
 
-    if ($produto == null) {
-        return response()->json(['error' => 'Produto não encontrado'], 404);
-    }
+// Route::get('/produtos', function () {
+//     $produtos = Produto::all();
+//     return view('lista', ['produtos' => $produtos]);
+// });
 
-    return view('produto', ['produto' => $produto]);
-});
+
+// Route::get('/produtos/{id}', function ($id) {
+//     $produto =  Produto::findOrFail($id);
+
+//     if ($produto == null) {
+//         return response()->json(['error' => 'Produto não encontrado'], 404);
+//     }
+
+//     return view('produto', ['produto' => $produto]);
+// });
