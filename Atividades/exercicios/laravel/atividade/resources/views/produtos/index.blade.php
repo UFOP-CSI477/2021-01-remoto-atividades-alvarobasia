@@ -11,6 +11,7 @@
             <th>Nome</th>
             <th>un</th>
             <th>unidademedida</th>
+            <th>exibir</th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +22,10 @@
             <td>{{ $p->nome }}</td>
             <td>{{ $p->un }}</td>
             <td>{{ $p->unidademedida }}</td>
+            <td>
+                <a href="{{route('produtos.show', $p->id)}}">
+                    Exibir
+                </a>
         </tr>
         @endforeach
     </tbody>
