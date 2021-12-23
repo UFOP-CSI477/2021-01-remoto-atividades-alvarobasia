@@ -15,6 +15,9 @@
         <a href="{{route('produtos.index')}}">
             <li class="nav-item">Produtos</li>
         </a>
+        <a href="{{route('cidades.index')}}">
+            <li class="nav-item">Cidades</li>
+        </a>
     </ul>
 
     @if(session('mensagem'))

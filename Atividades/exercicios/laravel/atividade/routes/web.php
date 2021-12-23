@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Produto;
 use App\Http\Controllers\ProdutoController;
-
+use App\Http\Controllers\CidadeController;
 
 
 Route::get('/', function () {
@@ -26,7 +26,7 @@ Route::get('/', function () {
 
 Route::resource('/produtos', ProdutoController::class);
 
-
+Route::resource('/cidades', CidadeController::class);
 
 // Route::get('/produtos', function () {
 //     $produtos = Produto::all();
