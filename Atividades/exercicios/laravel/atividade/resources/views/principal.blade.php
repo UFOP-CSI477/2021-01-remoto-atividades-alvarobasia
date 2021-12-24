@@ -18,6 +18,11 @@
         <a href="{{route('cidades.index')}}">
             <li class="nav-item">Cidades</li>
         </a>
+
+        <a href="{{route('pessoas.index')}}">
+            <li class="nav-item">Pessoas </li>
+        </a>
+
     </ul>
 
     @if(session('mensagem'))
