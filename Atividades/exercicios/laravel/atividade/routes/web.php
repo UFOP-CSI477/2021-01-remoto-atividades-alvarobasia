@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,15 +25,15 @@ Route::get('/', function () {
 });
 
 
-Route::resource('/produtos', ProdutoController::class);
+Route::resource('/produtos', ProdutoController::class)->middleware('auth');
 
-Route::resource('/cidades', CidadeController::class);
+Route::resource('/cidades', CidadeController::class)->middleware('auth');
 
-Route::resource('/pessoas', PessoaController::class);
+Route::resource('/pessoas', PessoaController::class)->middleware('auth');
 
-Route::resource('/compras', CompraController::class);
+Route::resource('/compras', CompraController::class)->middleware('auth');
 
-Route::resource('/estados', EstadoController::class);
+Route::resource('/estados', EstadoController::class)->middleware('auth');
 
 // Route::get('/produtos', function () {
 //     $produtos = Produto::all();
@@ -50,3 +50,7 @@ Route::resource('/estados', EstadoController::class);
 
 //     return view('produto', ['produto' => $produto]);
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
