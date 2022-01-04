@@ -48,7 +48,7 @@ Para executar instale um banco de dados PostgreSQL e o yarn, entre na pasta `bac
 yarn
 ```
 
-Crie um arquivo `.env` na raiz da pasta `back-end` com as informações necessárias para conexão com o banco de dados no qual será necessário informar a string de coneção:
+Crie um arquivo `.env` na raiz da pasta `back-end` com as informações necessárias para conexão com o banco de dados no qual será necessário informar a string de conexão:
 
 ```
 DATABASE_URL="sua string aqui"
@@ -85,3 +85,4 @@ yarn dev
 ```
 
 A aplicação está pronta e está sendo executada em `http://localhost:3000`.
+O back está sendo executado em `http://localhost:4000`.
