@@ -1,29 +1,87 @@
 # **CSI606-2021-01 - Remoto - Trabalho Final - Resultados**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
 
---------------
+## \*Aluna(o): Álvaro Basílio de Araújo (19.1.8019)
 
-<!-- Este documento tem como objetivo apresentar o projeto desenvolvido, considerando o que foi definido na proposta e o produto final. -->
+---
 
-### Resumo
+Survey anything
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+O objetivo deste trabalho será criar um portal de enquetes no qual o usuário poderá criar enquetes e disponibilizá-las para outros usuários votarem.
 
-### 1. Funcionalidades implementadas
-<!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
-  
-### 2. Funcionalidades previstas e não implementadas
-<!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
+<!-- Apresentar o tema. -->
 
-### 3. Outras funcionalidades implementadas
-<!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
+### 1. Tema
 
-### 4. Principais desafios e dificuldades
-<!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
+O trabalho final tem como tema o desenvolvimento de um portal para criação de enquetes de diversos tipos
 
-### 5. Instruções para instalação e execução
-<!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
+<!-- Descrever e limitar o escopo da aplicação. -->
 
-### 6. Referências
-<!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
+### 2. Escopo
 
+Este projeto terá as seguintes funcionalidades...
+
+    - O usuário poderá se cadastrar com seus dados
+    - O usuário poderá criar uma enquete
+    - O usuário poderá votar em uma enquete
+    - O usuário que criou a enquete poderá ver o resultado parcial
+    - O usuário que criou a enquete poderá ver o resultado final
+    - O usuário que criou a enquete poderá ver como cada pessoal votou
+
+### 3. Restrições
+
+    - O usuário não pode votar fora do tempo determinado da enquete
+    - O usuário não pode votar na enquete que criou
+    - O usuário precisa de uma conta cadastrada para votar e criar enquetes
+    - O usuário não pode votar duas vezes na mesma enquete
+
+<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
+
+### 4. Protótipo
+
+Pode ser encontrado clicando em [https://www.figma.com/file/DM8OQGjMAbm6R4UznHfZMW/Untitled?node-id=0%3A1](https://www.figma.com/file/DM8OQGjMAbm6R4UznHfZMW/Untitled?node-id=0%3A1)
+
+### 5. Como executar
+
+Para executar instale um banco de dados PostgreSQL e o yarn, entre na pasta `back-end` rode o seguinte comando:
+
+```
+yarn
+```
+
+Crie um arquivo `.env` na raiz da pasta `back-end` com as informações necessárias para conexão com o banco de dados no qual será necessário informar a string de coneção:
+
+```
+DATABASE_URL="sua string aqui"
+```
+
+Após isso rode o seguinte comando:
+
+```
+npx prisma migrate dev
+```
+
+Após isso rode o seguinte comando:
+
+```
+npx prisma generate
+```
+
+Após isso rode o seguinte comando:
+
+```
+yarn start:dev
+```
+
+Apos isso entre na pasta `front-end` rode o seguinte comando:
+
+```
+yarn
+```
+
+Após isso rode o seguinte comando:
+
+```
+yarn dev
+```
+
+A aplicação está pronta e está sendo executada em `http://localhost:3000`.
