@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Pessoas {
+  id              Int         @id @default(autoincrement())
+  nome            String      @db.VarChar(150)
+  data_nascimento DateTime    @db.Date
+  cpf             String      @db.VarChar(11)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  registros       Registros[]
+}
+
+model Users {
+  id       Int    @id @default(autoincrement())
+  nome     String @db.VarChar(150)
+  email    String @unique @db.VarChar(150)
+  password String
+}
+
+model Unidades {
+  id              Int         @id @default(autoincrement())
+  nome            String      @db.VarChar(150)
+  data_nascimento DateTime    @db.Date
+  bairro          String      @db.VarChar(150)
+  cidade          String      @db.VarChar(150)
+  estado          String      @db.VarChar(150)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  registros       Registros[]
+}
+
+model Vacinas {
+  id         Int         @id @default(autoincrement())
+  nome       String      @db.VarChar(150)
+  fabricante String      @db.VarChar(150)
+  pais       String      @db.VarChar(150)
+  doses      Int
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  registros  Registros[]
+}
+
+model Registros {
+  id         Int       @id @default(autoincrement())
+  data       DateTime  @db.Date
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  usersId    Int?
+  Unidades   Unidades? @relation(fields: [unidadesId], references: [id])
+  unidadesId Int?
+  Vacinas    Vacinas?  @relation(fields: [vacinasId], references: [id])
+  vacinasId  Int?
+  Pessoas    Pessoas?  @relation(fields: [pessoasId], references: [id])
+  pessoasId  Int?
+}
